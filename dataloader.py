@@ -11,5 +11,9 @@ def load_data():
     flu_data = pd.read_csv('ards_data/flu_data.csv')
     pneumonia_data = pd.read_csv('ards_data/pnem.csv')
     ards_centers = pd.read_csv('ards_data/ARDS_centers.csv')
+    literacy_rates = pd.read_csv('literacy_rates.csv')
+    incomes = pd.read_csv('incomes.csv')
+    age = pd.read_csv('age_data.csv')
+    seniors = pd.read_csv('senior_citizens.csv')
 
-    return county_coordinates, smoking_data, copd_data, covid_data, sepsis_data, drowning_data, vaccination_data, flu_data, pneumonia_data, ards_centers
+    return county_coordinates, smoking_data, copd_data, covid_data, sepsis_data, drowning_data, vaccination_data, flu_data, pneumonia_data, ards_centers, literacy_rates, incomes, age, seniors
