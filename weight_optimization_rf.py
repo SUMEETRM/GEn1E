@@ -15,6 +15,8 @@ def calculate_weights_rf(data_file):
 
     # Normalize both axes
     scaler = StandardScaler()
+
+    #CHRIS: Change the next line in your code
     cols_to_scale = ['normalized_smoking', 'normalized_copd', 'normalized_covid', 'normalized_drowning', 'normalized_sepsis', 'normalized_flu', 'normalized_pneumonia', 'normalized_vaccination', 'avg_normalized_incomes', 'avg_normalized_seniors', 'avg_normalized_literacy', 'vals']
     df[cols_to_scale] = scaler.fit_transform(df[cols_to_scale])
 
@@ -22,7 +24,7 @@ def calculate_weights_rf(data_file):
 
     from sklearn.ensemble import RandomForestRegressor
 
-    features = df[cols_to_scale[:-1]]  # Excludes 'vals'
+    features = df[cols_to_scale[:-1]]
     target = df['vals']
 
     model = RandomForestRegressor(n_estimators=100, random_state=42) 
